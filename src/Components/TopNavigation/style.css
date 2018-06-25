@@ -1,0 +1,32 @@
+.Top-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: #00539f;
+    height: 56px;
+    top: 0;
+}
+.Search{
+    border: none;
+    width: 40%;
+    height: 26px;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.SortButton{
+    margin: 0 10px 0 10px;
+    height: 26px;
+    background-color: white;
+}
+.btnIcon{
+    width: 22px;
+    height: 20px;
+}
+.Dashboardicon{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}

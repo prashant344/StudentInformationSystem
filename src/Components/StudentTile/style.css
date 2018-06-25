@@ -1,0 +1,15 @@
+.StudentTile{
+    cursor: pointer;
+}
+.TileImage{
+    text-align: center;
+}
+.Image{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.Tile-info{
+    margin:10px 0 0 0;
+}
