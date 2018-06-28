@@ -17,16 +17,19 @@
     box-sizing: border-box;
 }
 .SortButton{
-    margin: 0 10px 0 10px;
-    height: 26px;
-    background-color: white;
+    font-size: 1.0em;
+    height: 28px;
+    border-radius: 7px;
+    margin: 4px;
+    outline:none;
 }
 .btnIcon{
     width: 22px;
     height: 20px;
 }
-.Dashboardicon{
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
+.homeicon:before{
+    content: "\f015";
+    color: white;
+    font-size: 25px;
+    margin: 10px;
 }

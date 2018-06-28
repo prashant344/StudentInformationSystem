@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import './style.css';
-import homeicon from '../../icons/home-icon.png';
-import sortingIconAZ from '../../icons/sorting-icon-a-z.jpg';
-import sortingIconMarks from '../../icons/sorting-icon-marks.jpg';
 
 class TopNavigation extends Component{
     constructor(props){
@@ -112,10 +109,10 @@ class TopNavigation extends Component{
     render(){
         return (
             <div className="Top-nav">
-                <a href="/"><img className="Dashboardicon" alt="dashboard" src= {homeicon} /></a>
+                <a href="/"><i className="fas fa-home homeicon"></i></a>
                 <input className="Search" type="text" placeholder="search" onKeyUp={this.search} />
-                <button id='sortByName' className="SortButton" onClick = {this.sortByName} ><img className="btnIcon"src={sortingIconAZ} alt="sort by name"/></button>
-                <button id='sortByMarks' className="SortButton" onClick = {this.sortByMarks}><img className="btnIcon"src={sortingIconMarks} alt="sort by marks" /></button>
+                <button id='sortByName' className="SortButton" onClick = {this.sortByName} ><i className="fas fa-sort-alpha-down"></i></button>
+                <button id='sortByMarks' className="SortButton" onClick = {this.sortByMarks}><i className="fas fa-sort-numeric-up"></i></button>
             </div>
         )
     } 
