@@ -21,16 +21,31 @@
     background-color: #edeff2;
 }
 .TileList{
-    padding: 0 20px;
+        padding: 0 10%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
 }
 
 @media screen and (min-width:600px) and (max-width:959px){
     .StudentTileList{
         max-width:600px;
     }
+    
 }
 @media screen and (min-width:320px) and (max-width:599px){
     .StudentTileList{
         max-width:400px;
+    }
+    .TileList{
+        justify-content: space-evenly;
+    }
+    .TileInfo{
+        width: 80%;
+    }
+    .StudentTile{
+        width: 100%;
+        text-align:center;
     }
 }
