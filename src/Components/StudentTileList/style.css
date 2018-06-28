@@ -25,14 +25,16 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: left;
 }
 
 @media screen and (min-width:600px) and (max-width:959px){
     .StudentTileList{
         max-width:600px;
     }
-    
+    .TileList{
+        justify-content: space-evenly;
+    }
 }
 @media screen and (min-width:320px) and (max-width:599px){
     .StudentTileList{
