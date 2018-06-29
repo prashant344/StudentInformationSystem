@@ -14,6 +14,17 @@ class TopNavigation extends Component{
         this.sortByMarks = this.sortByMarks.bind(this);
     }
 
+    componentDidMount(){
+        const studentInfo = this.props.students;
+        var students = [];
+        for(var keyname in studentInfo){
+            students.push(studentInfo[keyname]);
+        }
+        this.setState({
+            results:students
+        })
+    }
+
     search(event){
         const studentInfo = this.props.students;
         var results = [];
@@ -28,14 +39,11 @@ class TopNavigation extends Component{
         this.setState({
             results:results
         })
-        if(results.length > 0){
-            this.props.searchResult(results);
-        }
-        
+        this.props.searchResult(results);
     }
 
     sortByName(){
-        const studentInfo = this.props.students;
+        const studentInfo = this.state.results;
         var results = {};
         var students = [];
         for(var keyname in studentInfo){
@@ -67,7 +75,7 @@ class TopNavigation extends Component{
     }
 
     sortByMarks(){
-        const studentInfo = this.props.students;
+        const studentInfo = this.state.results;
         var results = {};
         var students = [];
         for(var keyname in studentInfo){

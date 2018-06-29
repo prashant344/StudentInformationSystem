@@ -4,8 +4,8 @@ import './style.css';
 
 
 const StudentTileList = ({students}) => {
-    if(students === undefined || students === 'undefined'){
-        return (<div></div>);
+    if(students === undefined || students === 'undefined' || students.length === 0){
+        return (<div id='StudentTileList' className='StudentTileList'>No results found.. </div>);
     }
     
     else{
