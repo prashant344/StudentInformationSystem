@@ -1,0 +1,14 @@
+.HomepageBtn{
+    background-color: #00539f;
+    width: 150px;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 10px;
+}
+.HomepageBtn a{
+    color: white;
+    text-decoration: none;
+}
+.Error-container{
+    margin-top:150px;
+}

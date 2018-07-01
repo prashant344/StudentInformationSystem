@@ -39,7 +39,9 @@ class TopNavigation extends Component{
         this.setState({
             results:results
         })
-        this.props.searchResult(results);
+        if (Object.keys(this.props).length > 0){
+            this.props.searchResult(results);
+        }
     }
 
     sortByName(){

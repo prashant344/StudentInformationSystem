@@ -10,6 +10,7 @@ class StudentDetails extends Component {
         super(props);
         this.state = {
             isloading:true,
+            iserror:false,
             Marks:[],
             Name:'',
             Class:'',
@@ -37,27 +38,35 @@ class StudentDetails extends Component {
         fetch('https://api.myjson.com/bins/1dlper').then(
             (data)=>{return data.json()}).then(
             (res)=>{
-                const marks=res[id].marks;
-                for(var key in marks){
-                    data.push({text:key,value:marks[key]})
+                    const marks=res[id].marks;
+                    for(var key in marks){
+                        data.push({text:key,value:marks[key]})
+                    }
+                    this.setState({
+                        Name:res[id].name,
+                        Class:res[id].class,
+                        RollNo:res[id].rollNo,
+                        Marks:data,
+                        isloading:false
+                    })
                 }
-                this.setState({
-                    Name:res[id].name,
-                    Class:res[id].class,
-                    RollNo:res[id].rollNo,
-                    Marks:data,
-                    isloading:false
-                })
-            }
-        )
+            ).catch((err)=>this.setState({iserror:true}));
     }
 
     componentDidMount(){
-        { this.props.location.state ? this.setData(): this.getData()}
+        this.props.location.state ? this.setData(): this.getData();
     }
-    
+
     render(){
         const margin = {top: 20, right: 20, bottom: 30, left: 20};
+        if(this.state.iserror){
+            return(
+                <div>
+                    <TopNavigation />
+                    <div className="container">OOPS... Something Went Wrong..</div>
+                </div>
+            )
+        }
         return(
             this.state.isloading ? (
                 <div><TopNavigation />
